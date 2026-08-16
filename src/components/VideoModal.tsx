@@ -71,13 +71,13 @@ export default function VideoModal({ project, onClose }: VideoModalProps) {
             className="relative z-10 w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
+            {/* Close Button (Fixed Top Right) */}
             <button
               onClick={onClose}
-              className="absolute -top-12 right-0 p-2 text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
+              className="fixed top-4 right-4 md:top-8 md:right-8 z-50 p-3 bg-bg/50 hover:bg-bg/80 rounded-full text-text-secondary hover:text-text-primary backdrop-blur-sm transition-colors cursor-pointer border border-border"
               aria-label="Close video modal"
             >
-              <X size={28} />
+              <X size={24} />
             </button>
 
             {/* Video */}
@@ -129,9 +129,18 @@ export default function VideoModal({ project, onClose }: VideoModalProps) {
                 </p>
                 <h3 className="text-xl font-bold mt-1">{project.title}</h3>
               </div>
-              <p className="text-sm text-text-secondary max-w-sm mx-auto">
-                {project.description}
-              </p>
+              {project.description && (
+                <p className="text-sm text-text-secondary max-w-sm mx-auto">
+                  {project.description}
+                </p>
+              )}
+              
+              <button
+                onClick={onClose}
+                className="mt-4 px-8 py-2.5 bg-white/5 hover:bg-white/10 text-text-primary rounded-full border border-white/10 transition-all duration-300 text-xs font-bold uppercase tracking-[0.2em] cursor-pointer"
+              >
+                Close Video
+              </button>
             </div>
           </motion.div>
         </motion.div>
