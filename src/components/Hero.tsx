@@ -33,7 +33,7 @@ export default function Hero() {
                 disableRemotePlayback
                 className="w-full h-full object-cover opacity-60"
               >
-                <source src={bgVideo} type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}${bgVideo.replace(/^\//, '')}`} type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-b from-bg/20 via-bg/60 to-bg" />
             </div>
@@ -152,7 +152,7 @@ export default function Hero() {
                 if (editorPhoto) {
                   return (
                     <img
-                      src={editorPhoto}
+                      src={`${import.meta.env.BASE_URL}${editorPhoto.replace(/^\//, '')}`}
                       alt="Videographer portrait"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />

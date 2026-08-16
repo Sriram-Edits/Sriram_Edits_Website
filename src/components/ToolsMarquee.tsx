@@ -23,7 +23,7 @@ export default function ToolsMarquee() {
               transition={{ delay: index * 0.1 }}
               className="flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-full hover:bg-white/10 hover:border-white/20 transition-all duration-300 shadow-[0_4px_24px_-8px_rgba(0,0,0,0.5)]"
             >
-              <img src={tool.icon} alt={tool.name} loading="lazy" className="h-8 w-8 md:h-10 md:w-10 object-contain drop-shadow-md" />
+              <img src={`${import.meta.env.BASE_URL}${tool.icon.replace(/^\//, '')}`} alt={tool.name} loading="lazy" className="h-8 w-8 md:h-10 md:w-10 object-contain drop-shadow-md" />
               <span className="text-sm md:text-base font-bold uppercase tracking-[0.15em] text-text-primary">
                 {tool.name}
               </span>

@@ -37,7 +37,7 @@ export default function PortfolioCard({
       <div className="relative aspect-[9/16] bg-bg-card rounded-sm overflow-hidden border border-border group-hover:border-accent/30 transition-all duration-500">
         {project.thumbnail ? (
           <img
-            src={project.thumbnail}
+            src={`${import.meta.env.BASE_URL}${project.thumbnail.replace(/^\//, '')}`}
             alt={project.title}
             loading="lazy"
             className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
