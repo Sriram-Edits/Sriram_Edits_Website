@@ -44,8 +44,8 @@ export const projects: Project[] = [
     category: 'Colour Grading',
     title: 'Color Grading',
     description: '',
-    thumbnail: '/colour grading.jpg',
-    videoUrl: '/colour grading.mp4',
+    thumbnail: '/colour-grading.jpg',
+    videoUrl: '/colour-grading.mp4',
     year: 2025,
   },
   {
@@ -54,8 +54,8 @@ export const projects: Project[] = [
     category: 'Portrait',
     title: 'Built For Attention',
     description: '',
-    thumbnail: '/another commercial.png',
-    videoUrl: '/another commercial.mp4',
+    thumbnail: '/another-commercial.png',
+    videoUrl: '/another-commercial.mp4',
     year: 2025,
   },
 ];
