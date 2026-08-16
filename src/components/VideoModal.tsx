@@ -99,10 +99,10 @@ export default function VideoModal({ project, onClose }: VideoModalProps) {
                   }
                   return (
                     <video
-                      src={`${import.meta.env.BASE_URL}${project.videoUrl.replace(/^\//, '')}`}
+                      src={encodeURI(`${import.meta.env.BASE_URL}${project.videoUrl.replace(/^\//, '')}`)}
                       controls
                       className="w-full h-full object-cover"
-                      poster={project.thumbnail ? `${import.meta.env.BASE_URL}${project.thumbnail.replace(/^\//, '')}` : undefined}
+                      poster={project.thumbnail ? encodeURI(`${import.meta.env.BASE_URL}${project.thumbnail.replace(/^\//, '')}`) : undefined}
                     />
                   );
                 })()
